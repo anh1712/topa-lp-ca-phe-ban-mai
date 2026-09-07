@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qu�n C� Ph� Ban Mai</title>
+<meta name="description" content="Viết 1–2 câu nói rõ bạn làm gì và khách nhận được lợi ích gì. Nên dài khoảng 70–160 ký tự để hiển thị đẹp trên Google.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Qu�n C� Ph� Ban Mai">
+<meta property="og:description" content="Viết 1–2 câu nói rõ bạn làm gì và khách nhận được lợi ích gì. Nên dài khoảng 70–160 ký tự để hiển thị đẹp trên Google.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📘</text></svg>">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Qu�n C� Ph� BanMai","telephone":"0000 000 000","email":"email@tencongty.vn","address":"Địa chỉ của bạn","description":"Viết 1–2 câu nói rõ bạn làm gì và khách nhận được lợi ích gì. Nên dài khoảng 70–160 ký tự để hiển thị đẹp trên Google."}</script>
+<style>
+:root{
+  --brand:#2563EB; --brand-rgb:37, 99, 235; --brand-light:#60A5FA; --brand-dark:#1e51c1;
+  /* Màu nền cho phần có CHỮ TRẮNG đè lên: tự làm đậm từ màu thương hiệu tới khi
+     đạt tương phản 4.5. Nhờ vậy marketer chọn màu sáng cỡ nào chữ vẫn đọc được,
+     mà --brand gốc vẫn giữ nguyên cho chữ/viền/nền nhạt. */
+  --brand-btn:#2563EB; --accent-btn:#9f6607;
+  --accent:#F59E0B; --text:#4B5563; --muted:#6B7280; --heading:#111827;
+  --faint:#9CA3AF; --surface:#FFFFFF; --surface-alt:#F9FAFB; --footer-bg:#111827;
+  --radius-pill:24px; --radius-round:30px; --maxw:1170px; --fs:15px;
+  --heading-font:'Segoe UI', system-ui, Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Segoe UI', system-ui, Arial, sans-serif;font-size:var(--fs);line-height:1.75;color:var(--text);background:var(--surface);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none;transition:color .18s ease}
+a:hover{color:var(--brand-dark)}
+h1,h2,h3,h4{color:var(--heading);font-family:var(--heading-font);font-weight:600;margin:0 0 .5em;line-height:1.25}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ---------- Nút ---------- */
+.btn{display:inline-block;padding:12px 30px;border-radius:var(--radius-pill);font-weight:600;font-size:15px;
+  border:2px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease}
+.btn-primary{background:var(--brand-btn);color:#fff;box-shadow:0 6px 18px rgba(var(--brand-rgb),.32)}
+.btn-primary:hover{background:var(--brand-dark);color:#fff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(var(--brand-rgb),.42)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+.btn-ghost:hover{background:#fff;color:var(--brand);transform:translateY(-2px)}
+.btn-accent{background:var(--accent-btn);color:#fff;box-shadow:0 6px 18px rgba(254,87,34,.32)}
+.btn-accent:hover{filter:brightness(.94);color:#fff;transform:translateY(-2px)}
+
+/* ---------- Header ---------- */
+.site-header{background:var(--surface);border-bottom:1px solid #eef1f4;position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;gap:24px;min-height:84px}
+.logo{font-size:30px;font-weight:700;color:var(--heading);letter-spacing:-.5px;white-space:nowrap}
+.logo span{color:var(--brand)}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:18px}
+.phone{font-weight:700;font-size:18px;color:var(--accent);white-space:nowrap}
+.phone small{display:block;font-size:11px;font-weight:500;color:var(--faint);letter-spacing:.4px;text-transform:uppercase}
+.login-btn{padding:9px 24px;font-size:14px}
+.logo-img{display:inline-flex;align-items:center}
+.logo-img img{max-height:46px;width:auto;display:block}
+
+/* ---------- Nav ---------- */
+.mainnav{background:var(--surface);border-bottom:1px solid #eef1f4;position:sticky;top:84px;z-index:49}
+.mainnav ul{display:flex;flex-wrap:wrap;gap:2px;list-style:none;margin:0;padding:0}
+.mainnav a{display:block;padding:14px 16px;font-size:14px;font-weight:600;color:var(--muted);position:relative}
+.mainnav a::after{content:"";position:absolute;left:16px;right:16px;bottom:8px;height:2px;background:var(--brand);
+  transform:scaleX(0);transform-origin:left;transition:transform .22s ease}
+.mainnav a:hover{color:var(--brand)}
+.mainnav a:hover::after{transform:scaleX(1)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;display:flex;align-items:center;overflow:hidden;
+  background:linear-gradient(120deg,var(--brand-btn) 0%,var(--brand) 70%,var(--brand-light) 100%);color:#fff}
+/* Ảnh nền hero: phủ kín, có lớp tối nhẹ để chữ trắng vẫn đọc được (giữ chuẩn tương phản). */
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-has-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(2,124,180,.72),rgba(3,169,245,.55));z-index:1}
+.hero-has-bg .wrap{position:relative;z-index:2}
+.hero::before,.hero:not(.hero-has-bg)::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.10);pointer-events:none}
+.hero::before{width:520px;height:520px;top:-180px;right:-120px}
+.hero:not(.hero-has-bg)::after{width:340px;height:340px;bottom:-150px;left:-90px;background:rgba(255,255,255,.07)}
+.hero .wrap{position:relative;z-index:2;text-align:center}
+.hero-eyebrow{display:inline-block;padding:6px 18px;border-radius:var(--radius-pill);background:rgba(255,255,255,.18);
+  font-size:13px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(32px,5.2vw,58px);color:#fff;font-weight:700;margin-bottom:18px;letter-spacing:-1px}
+.hero-sub{font-size:17px;max-width:720px;margin:0 auto 32px;color:rgba(255,255,255,.94);line-height:1.8}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Khối chung ---------- */
+.section{padding:84px 0}
+.section-alt{background:var(--surface-alt)}
+.section-head{text-align:center;max-width:720px;margin:0 auto 52px}
+.eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
+.section-head h2{font-size:clamp(24px,3.2vw,36px);margin-bottom:14px}
+.section-head p{color:var(--muted);font-size:16px;margin:0}
+.section-head::after{content:"";display:block;width:56px;height:3px;border-radius:2px;background:var(--accent);margin:22px auto 0}
+
+/* ---------- Lưới thẻ ---------- */
+.grid{display:grid;gap:26px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--surface);border:1px solid #eceff3;border-radius:14px;padding:34px 28px;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(17,24,39,.10);border-color:rgba(var(--brand-rgb),.35)}
+.card-icon{width:60px;height:60px;border-radius:var(--radius-round);display:flex;align-items:center;justify-content:center;
+  font-size:27px;margin-bottom:20px;background:rgba(var(--brand-rgb),.12);transition:transform .25s ease}
+.card-icon-img{overflow:hidden;background:none}
+.card-icon-img img{width:100%;height:100%;object-fit:cover}
+.card:hover .card-icon{transform:scale(1.08) rotate(-4deg)}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:var(--text);font-size:14px;margin-bottom:16px}
+.card-cta{font-size:14px;font-weight:700;color:var(--brand);display:inline-flex;align-items:center;gap:6px}
+.card-cta::after{content:"→";transition:transform .2s ease;display:inline-block}
+.card:hover .card-cta::after{transform:translateX(5px)}
+.card-alt{background:var(--surface)}
+.persona{text-align:center}
+.persona .card-icon{margin:0 auto 20px;background:rgba(254,87,34,.12)}
+
+/* ---------- Dải CTA ---------- */
+.cta-band{background:linear-gradient(120deg,var(--brand-btn) 0%,var(--brand-dark) 100%);color:#fff;padding:70px 0;text-align:center}
+.cta-band h2{color:#fff;font-size:clamp(24px,3.2vw,34px)}
+.cta-band p{color:rgba(255,255,255,.92);max-width:620px;margin:0 auto 28px;font-size:16px}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--footer-bg);color:#b9bcc4;padding:62px 0 0;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:1.6fr repeat(auto-fit,minmax(170px,1fr));gap:36px;padding-bottom:44px}
+/* Dùng h3 (không phải h4) để các cấp tiêu đề không nhảy cóc H2 → H4 */
+.site-footer h3{color:#fff;font-size:15px;letter-spacing:.6px;margin-bottom:18px}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin-bottom:10px}
+.site-footer li,.site-footer a{color:#b9bcc4;transition:color .18s ease}
+.site-footer a:hover{color:var(--brand-light)}
+.footer-logo{font-size:26px;font-weight:700;color:#fff;margin-bottom:14px}
+.footer-logo span{color:var(--brand-light)}
+.footer-contact{margin-top:16px;line-height:2}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.10);padding:20px 0;text-align:center;color:#8b8f98;font-size:13px}
+
+/* ---------- Animation ----------
+   NGUYÊN TẮC: mặc định nội dung LUÔN HIỆN. Chỉ khi JS chạy được mới thêm lớp
+   .js-anim lên <html> rồi mới ẩn đi để trượt vào. Nếu làm ngược (ẩn sẵn bằng CSS,
+   chờ JS hiện) thì JS hỏng/bị chặn là cả trang trắng trơn — mất nội dung với
+   người dùng, với bot đọc trang, và khi in ra giấy. */
+.reveal{opacity:1;transform:none}
+
+.js-anim .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s cubic-bezier(.22,.68,.24,1),transform .65s cubic-bezier(.22,.68,.24,1)}
+.js-anim .reveal.in{opacity:1;transform:none}
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.js-anim .hero-eyebrow{animation:heroIn .7s .05s both}
+.js-anim .hero h1{animation:heroIn .7s .18s both}
+.js-anim .hero-sub{animation:heroIn .7s .30s both}
+.js-anim .hero-actions{animation:heroIn .7s .42s both}
+@media (prefers-reduced-motion:reduce){
+  .js-anim .reveal{opacity:1;transform:none;transition:none}
+  .js-anim .hero-eyebrow,.js-anim .hero h1,.js-anim .hero-sub,.js-anim .hero-actions{animation:none}
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  .header-inner{min-height:70px;flex-wrap:wrap;gap:12px;padding:12px 0}
+  .mainnav{position:static}
+  .mainnav ul{justify-content:center}
+  .mainnav a{padding:10px 12px;font-size:13px}
+  .section{padding:56px 0}
+  .hero{min-height:520px !important}
+}
+@media (max-width:560px){
+  .logo{font-size:24px}
+  .phone{font-size:16px}
+  .header-right{gap:12px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .btn{width:100%;text-align:center}
+  .card{padding:26px 22px}
+}</style>
+<script>document.documentElement.className+=' js-anim'</script>
+</head>
+<body data-stage="published">
+
+<header class="site-header" data-section="header">
+  <div class="wrap header-inner">
+    <div class="logo"><span>Qu�n C� Ph� Ban</span><span style="color:var(--accent)">Mai</span></div>
+    <div class="header-right">
+      <div class="phone"><small>Tư vấn miễn phí</small><a href="tel:0000000000" style="color:inherit">0000 000 000</a></div>
+      <a class="btn btn-primary login-btn" href="#lien-he">Liên hệ</a>
+    </div>
+  </div>
+</header>
+
+<nav class="mainnav" data-section="nav">
+  <div class="wrap">
+    <ul>
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="#giai-phap">Dịch vụ</a></li>
+        <li><a href="#tinh-nang">Vì sao chọn chúng tôi</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" data-section="hero" style="min-height:560px">
+  
+  <div class="wrap">
+    <span class="hero-eyebrow">QU�N C� PH� BAN MAI</span>
+    <h1>Qu�n C� Ph� Ban Mai — giới thiệu ngắn gọn về bạn</h1>
+    <p class="hero-sub">Viết 1–2 câu nói rõ bạn làm gì và khách nhận được lợi ích gì. Nên dài khoảng 70–160 ký tự để hiển thị đẹp trên Google.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#giai-phap">Xem dịch vụ</a>
+      <a class="btn btn-ghost" href="#lien-he">Liên hệ ngay</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="giai-phap" data-section="services">
+  <div class="wrap">
+    
+        <div class="section-head reveal">
+          <span class="eyebrow">DỊCH VỤ</span>
+          <h2>Chúng tôi cung cấp những gì</h2>
+          <p>Liệt kê các dịch vụ chính của bạn.</p>
+        </div>
+    <div class="grid grid-3 reveal" data-list="services.items">
+          <article class="card">
+            <div class="card-icon">⭐</div>
+            <h3>Dịch vụ thứ nhất</h3>
+            <p>Mô tả ngắn dịch vụ này giúp khách giải quyết việc gì.</p>
+            <a class="card-cta" href="#lien-he">Tìm hiểu thêm</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">💡</div>
+            <h3>Dịch vụ thứ hai</h3>
+            <p>Mô tả ngắn dịch vụ này giúp khách giải quyết việc gì.</p>
+            <a class="card-cta" href="#lien-he">Tìm hiểu thêm</a>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Dịch vụ thứ ba</h3>
+            <p>Mô tả ngắn dịch vụ này giúp khách giải quyết việc gì.</p>
+            <a class="card-cta" href="#lien-he">Tìm hiểu thêm</a>
+          </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="tinh-nang" data-section="features">
+  <div class="wrap">
+    
+        <div class="section-head reveal">
+          <span class="eyebrow">VÌ SAO CHỌN CHÚNG TÔI</span>
+          <h2>Điểm mạnh của chúng tôi</h2>
+          <p>Nêu lý do khách nên chọn bạn thay vì nơi khác.</p>
+        </div>
+    <div class="grid grid-3 reveal" data-list="features.items">
+          <article class="card card-alt">
+            <div class="card-icon">✅</div>
+            <h3>Điểm mạnh thứ nhất</h3>
+            <p>Giải thích ngắn gọn, cụ thể, tránh nói chung chung.</p>
+            
+          </article>
+          <article class="card card-alt">
+            <div class="card-icon">⚡</div>
+            <h3>Điểm mạnh thứ hai</h3>
+            <p>Giải thích ngắn gọn, cụ thể, tránh nói chung chung.</p>
+            
+          </article>
+          <article class="card card-alt">
+            <div class="card-icon">🤝</div>
+            <h3>Điểm mạnh thứ ba</h3>
+            <p>Giải thích ngắn gọn, cụ thể, tránh nói chung chung.</p>
+            
+          </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="doi-tuong" data-section="personas">
+  <div class="wrap">
+    
+        <div class="section-head reveal">
+          <span class="eyebrow">PHÙ HỢP VỚI AI</span>
+          <h2>Chúng tôi phục vụ những ai</h2>
+          <p>Nêu rõ nhóm khách hàng mục tiêu.</p>
+        </div>
+    <div class="grid grid-3 reveal" data-list="personas.items">
+          <article class="card persona">
+            <div class="card-icon">👥</div>
+            <h3>Nhóm khách thứ nhất</h3>
+            <p>Mô tả ngắn nhóm khách này.</p>
+            
+          </article>
+          <article class="card persona">
+            <div class="card-icon">🏢</div>
+            <h3>Nhóm khách thứ hai</h3>
+            <p>Mô tả ngắn nhóm khách này.</p>
+            
+          </article>
+          <article class="card persona">
+            <div class="card-icon">🛍️</div>
+            <h3>Nhóm khách thứ ba</h3>
+            <p>Mô tả ngắn nhóm khách này.</p>
+            
+          </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="lien-he" data-section="cta">
+  <div class="wrap reveal">
+    <h2>Sẵn sàng bắt đầu?</h2>
+    <p>Để lại thông tin, chúng tôi sẽ liên hệ tư vấn miễn phí.</p>
+    <a class="btn btn-ghost" href="#lien-he">Liên hệ ngay</a>
+  </div>
+</section>
+
+<footer class="site-footer" data-section="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Qu�n C� Ph� Ban<span>Mai</span></div>
+        <p>Qu�n C� Ph� Ban Mai — mô tả ngắn về doanh nghiệp của bạn.</p>
+        <div class="footer-contact">
+          <div>📍 Địa chỉ của bạn</div>
+          <div>📞 0000 000 000</div>
+          <div>✉️ email@tencongty.vn</div>
+        </div>
+      </div>
+      
+      <div>
+        <h3>Dịch vụ</h3>
+        <ul>
+          <li><a href="#">[object Object]</a></li>
+          <li><a href="#">[object Object]</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Công ty</h3>
+        <ul>
+          <li><a href="#">[object Object]</a></li>
+          <li><a href="#">[object Object]</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="wrap"><span>© 2026 Qu�n C� Ph� Ban Mai. Bảo lưu mọi quyền.</span></div></div>
+</footer>
+
+<script>
+// Hiện dần khi cuộn tới — có stagger cho các thẻ con.
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting)return;
+      en.target.classList.add('in');
+      Array.prototype.forEach.call(en.target.children,function(child,i){
+        child.style.transition='opacity .55s cubic-bezier(.22,.68,.24,1) '+(i*90)+'ms, transform .55s cubic-bezier(.22,.68,.24,1) '+(i*90)+'ms';
+        child.style.opacity='0';child.style.transform='translateY(18px)';
+        requestAnimationFrame(function(){requestAnimationFrame(function(){child.style.opacity='1';child.style.transform='none';})});
+      });
+      io.unobserve(en.target);
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+  // Lưới an toàn: nếu IO vì lý do nào đó không kích hoạt (tab chạy nền, chụp ảnh
+  // toàn trang, trình duyệt lạ) thì sau 2.5s hiện hết — thà mất hiệu ứng còn hơn mất nội dung.
+  setTimeout(function(){els.forEach(function(e){e.classList.add('in')})},2500);
+  // In ra giấy cũng phải thấy đủ nội dung.
+  window.addEventListener('beforeprint',function(){els.forEach(function(e){e.classList.add('in')})});
+})();
+</script>
+
+</body>
+</html>
